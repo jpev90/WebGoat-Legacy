@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>WebGoat</groupId>
     <artifactId>WebGoat</artifactId>
-    <packaging>jar</packaging>
-    <version>6.0.2</version>
+    <packaging>war</packaging>
+    <version>6.0.1</version>
 
     <!-- Shared version number properties -->
     <properties>
@@ -26,11 +26,6 @@
             </resource>
         </resources>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -341,18 +336,18 @@
     </dependencies>
       <repositories>
     <repository>
-      <id>maven-central</id>
-      <url>http://localhost:8081/repository/maven-central/</url>
+      <id>maven-public</id>
+      <url>http://localhost:8081/repository/maven-public/</url>
     </repository>
   </repositories>
   <distributionManagement>
     <repository>
-      <id>nexus-snapshots</id>
+      <id>nexus</id>
       <name>Releases</name>
       <url>http://localhost:8081/repository/maven-releases</url>
     </repository>
     <snapshotRepository>
-      <id>nexus-releases</id>
+      <id>nexus</id>
       <name>Snapshot</name>
       <url>http://localhost:8081/repository/maven-snapshots</url>
     </snapshotRepository>
